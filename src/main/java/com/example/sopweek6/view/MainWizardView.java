@@ -1,5 +1,6 @@
 package com.example.sopweek6.view;
 
+import com.example.sopweek6.pojo.Wizards;
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.combobox.ComboBox;
@@ -17,10 +18,12 @@ public class MainWizardView extends VerticalLayout {
     private ComboBox position, school, house;
     private Button btnBefore, btnCreate, btnUpdate, btnDel, btnAfter;
     private HorizontalLayout panel;
+    private Wizards wizards = new Wizards();
 
     public MainWizardView() {
         fullname = new TextField();
         fullname.setPlaceholder("Fullname");
+//        fullname.setValue(String.valueOf(wizards.model.get(0).getName() ));
         gender = new RadioButtonGroup<>();
         gender.setLabel("Gender :");
         gender.setItems("Male", "Female");

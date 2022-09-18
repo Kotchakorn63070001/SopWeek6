@@ -18,4 +18,9 @@ public class WizardService {
     public List<Wizard> retrieveWizards(){
         return repository.findAll();
     }
+
+    public Wizard createWizard(Wizard wizard){
+        return repository.save(wizard);
+    }
+
 }

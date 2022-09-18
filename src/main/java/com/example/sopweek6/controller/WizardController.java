@@ -5,9 +5,7 @@ import com.example.sopweek6.pojo.Wizards;
 import com.example.sopweek6.repository.WizardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +26,19 @@ public class WizardController {
 //    public ArrayList<Wizard> getWizardsList(){
 //        return wizards.model;
 //    }
+
+    @RequestMapping(value = "/addWizard", method = RequestMethod.POST)
+    public ResponseEntity<?> addWizard(@RequestParam("sex") String sex,
+                                       @RequestParam("name") String name,
+                                       @RequestParam("school") String school,
+                                       @RequestParam("house") String house,
+                                       @RequestParam("money") int money,
+                                       @RequestParam("position") String position){
+        Wizard n = wizardService.createWizard(new Wizard(null, sex, name, school, house, money, position));
+        return ResponseEntity.ok(n);
+    }
+
+
 
 
 }
