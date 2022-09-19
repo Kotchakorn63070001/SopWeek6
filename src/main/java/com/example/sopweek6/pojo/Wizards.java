@@ -6,5 +6,7 @@ import java.util.List;
 public class Wizards {
     public ArrayList<Wizard> model;
 
-
+    public Wizards() {
+        this.model = new ArrayList<>();
+    }
 }
