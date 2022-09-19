@@ -1,10 +1,14 @@
 package com.example.sopweek6.pojo;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-//@Data
+
+import java.io.Serializable;
+
+@Data
 @Document("Wizard")
-public class Wizard {
+public class Wizard implements Serializable {
     @Id
     private String _id;
     private String sex;

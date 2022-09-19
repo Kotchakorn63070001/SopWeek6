@@ -4,9 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Wizards {
-    public ArrayList<Wizard> model;
+    private ArrayList<Wizard> model;
 
-    public Wizards() {
-        this.model = new ArrayList<>();
+    public ArrayList<Wizard> getModel() {
+        return model;
     }
+
+    public void setModel(ArrayList<Wizard> model) {
+        this.model = model;
+    }
+
+    //    public Wizards() {
+//        this.model = new ArrayList<Wizard>();
+//    }
 }

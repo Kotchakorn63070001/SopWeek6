@@ -23,4 +23,20 @@ public class WizardService {
         return repository.save(wizard);
     }
 
+    public Wizard retrieveById(String _id){
+        return repository.findByID(_id);
+    }
+    public Wizard updateWizard(Wizard wizard){
+        return repository.save(wizard);
+    }
+
+    public boolean deleteWizard(Wizard wizard){
+        try {
+            repository.delete(wizard);
+            return true;
+        } catch (Exception e){
+            return false;
+        }
+    }
+
 }
