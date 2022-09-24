@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -48,7 +47,4 @@ public class WizardController {
         boolean status = wizardService.deleteWizard(wizard);
         return status ? "Wizard has been deleted." : "Delete failed";
     }
-
-
-
 }

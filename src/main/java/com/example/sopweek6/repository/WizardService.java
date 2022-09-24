@@ -38,5 +38,4 @@ public class WizardService {
             return false;
         }
     }
-
 }

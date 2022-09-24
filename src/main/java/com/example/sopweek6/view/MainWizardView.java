@@ -38,7 +38,6 @@ public class MainWizardView extends VerticalLayout {
         wizards = new Wizards();
         fullname = new TextField();
         fullname.setPlaceholder("Fullname");
-//        fullname.setValue(String.valueOf(wizards.model.get(0).getName() ));
         gender = new RadioButtonGroup<>();
         gender.setLabel("Gender :");
         gender.setItems("Male", "Female");
@@ -141,8 +140,6 @@ public class MainWizardView extends VerticalLayout {
            }
            this.onTimeData();
         });
-
-
     }
     private void fetchData(){
         ArrayList<Wizard> allWizards = WebClient.create()
